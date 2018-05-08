@@ -1,0 +1,38 @@
+<!--
+@Author: Arnaud
+@Date:   2018-05-08T10:50:51+02:00
+@Project: Epitech project
+@Filename: index.html.erb
+@Last modified by:   Arnaud
+@Last modified time: 2018-05-08T10:50:54+02:00
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+		<h1>Listing articles</h1>
+		<table>
+			<tr>
+				<th>Title</th>
+				<th>Text</th>
+				<th></th>
+			</tr>
+
+			<% @articles.each do |article| %>
+				<tr>
+					<td>
+						<%= article.title %>
+					</td>
+					<td>
+						<%= article.text %>
+					</td>
+					<td>
+						<%= link_to 'show', article_path(article) %>
+					</td>
+				</tr>
+			<% end %>
+		</table>
+	</body>
+</html>

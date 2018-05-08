@@ -1,1 +1,30 @@
-<h1>New Article</h1>
+<!--
+@Author: Arnaud
+@Date:   2018-05-08T10:44:14+02:00
+@Project: Epitech project
+@Filename: new.html.erb
+@Last modified by:   Arnaud
+@Last modified time: 2018-05-08T10:44:18+02:00
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+		<h1>New Article</h1>
+		<%= form_with scope: :article, url: articles_path, local: true do |form| %>
+			<p>
+				<%= form.label :title %><br>
+				<%= form.text_field :title %>
+			</p>
+			<p>
+				<%= form.label :title %><br>
+				<%= form.text_field :text %>
+			</p>
+			<p>
+				<%= form.submit %>
+			</p>
+		<% end %>
+	</body>
+<html>

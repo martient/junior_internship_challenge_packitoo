@@ -1,0 +1,22 @@
+<!--
+@Author: Arnaud
+@Date:   2018-05-11T13:42:27+02:00
+@Project: Epitech project
+@Filename: __form.html.erb
+@Last modified by:   Arnaud
+@Last modified time: 2018-05-11T13:42:30+02:00
+-->
+
+<%= form_with(model: [ @article, @article.comments.build ], local: true) do |form| %>
+	<p>
+		<%= form.label :commenter %><br>
+		<%= form.text_field :commenter %>
+	</p>
+	<p>
+		<%= form.label :body %><br>
+		<%= form.text_area :body %>
+	</p>
+	<p>
+		<%= form.submit %>
+	</p>
+<% end %>

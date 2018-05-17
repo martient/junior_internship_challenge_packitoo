@@ -1,0 +1,26 @@
+<!--
+@Author: Arnaud
+@Date:   2018-05-17T14:53:05+02:00
+@Project: Epitech project
+@Filename: _show.html.erb
+@Last modified by:   Arnaud
+@Last modified time: 2018-05-17T14:53:12+02:00
+-->
+
+<% @article.ratings.each do |ratings| %>
+  <p>
+    <strong>Subject:</strong>
+    <%= ratings.name %>
+  </p>
+
+  <p>
+    <strong>Score:</strong>
+    <%= ratings.score %>
+  </p>
+  <td>
+	  <%= link_to 'Destroy rating', [ratings.article, ratings], method: :delete, data: {
+  		confirm: 'Are you sure?'
+  	}
+  	%>
+  </td>
+<% end %>

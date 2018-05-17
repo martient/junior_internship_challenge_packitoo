@@ -1,0 +1,22 @@
+<!--
+@Author: Arnaud
+@Date:   2018-05-17T15:02:53+02:00
+@Project: Epitech project
+@Filename: _create.html.erb
+@Last modified by:   Arnaud
+@Last modified time: 2018-05-17T15:02:57+02:00
+-->
+
+<%= form_with(model: [ @article, @article.ratings.build ], local: true) do |form| %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    <%= form.label :score %><br>
+    <%= form.text_area :score %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
